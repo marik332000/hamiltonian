@@ -37,9 +37,17 @@
         (format #t "~A-" (car path))
         (print-path (cdr path)))))
 
+;; Print out a path
+(define (print-path-n path n)
+  (if (eq? n 0) (format #t "~%")
+      (begin
+        (format #t "~A-" (car path))
+        (print-path-n (cdr path) (- n 1)))))
+
 ;; Recursively find all Hamiltonian paths.
 (define (find-hamil data node path)
   (set! path (cons node path))
+  (if (> (length path) 41) (print-path-n path 8))
   (cond
    ((visited? node) #f)
    ((= (length path) (length data)) (print-path path))
