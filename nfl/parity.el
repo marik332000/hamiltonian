@@ -52,8 +52,8 @@
   "Recursively find all Hamiltonian cycles."
   (push node stack)
   (cond
-   ((and (= (length stack) (length graph))
-	 (eq first node))
+   ((and (eq first node)
+	 (= (length stack) (1+ (length graph))))
     (print-path (reverse stack)))
    ((eq (symbol-value node) 'visited) nil)
    (t (set node 'visited)
