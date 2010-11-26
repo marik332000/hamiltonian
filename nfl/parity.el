@@ -48,24 +48,26 @@
   "Output the path sexp."
   (insert (format "%S\n" path)))
 
-(defun find-hamil (graph node stack)
-  "Recursively find all Hamiltonian paths."
+(defun find-hamil (graph first node stack)
+  "Recursively find all Hamiltonian cycles."
   (push node stack)
   (cond
+   ((and (= (length stack) (length graph))
+	 (eq first node))
+    (print-path (reverse stack)))
    ((eq (symbol-value node) 'visited) nil)
-   ((= (length stack) (length graph)) (print-path (reverse stack)))
    (t (set node 'visited)
       (dolist (cur (cdr (assq node graph)))
-	(find-hamil graph cur stack))
+	(find-hamil graph first cur stack))
       (set node 'unvisited))))
 
 (defun hamil (graph)
-  "Find and output all Hamiltonian paths in the data to buffer *hamil*."
+  "Find and output all Hamiltonian cycles in the data to buffer *hamil*."
   (let ((first 'Steelers))
     (clear-search graph 'unvisited)
     (with-current-buffer (get-buffer-create "*hamil*")
       (erase-buffer)
-      (find-hamil graph first ()))))
+      (find-hamil graph first first ()))))
 
 ;(hamil (create-win-graph (get-scores "scores2008.el")))
 ;(hamil (create-win-graph (get-scores "scores2009.el")))
