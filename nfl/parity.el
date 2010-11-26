@@ -63,7 +63,7 @@
 
 (defun hamil (graph)
   "Find and output all Hamiltonian cycles in the data to buffer *hamil*."
-  (let ((first 'Steelers))
+  (let ((first 'Patriots))
     (clear-search graph 'unvisited)
     (with-current-buffer (get-buffer-create "*hamil*")
       (erase-buffer)
