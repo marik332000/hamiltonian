@@ -1,6 +1,5 @@
 ;; Wins directed graph for the NFL 2008 regular season
-((Caints Chiefs)
- (Chargers Jets Patriots Raiders Chiefs Buccaneers Broncos)
+((Chargers Jets Patriots Raiders Chiefs Buccaneers Broncos)
  (Broncos Raiders Chargers Saints Buccaneers Browns Falcons Jets Chiefs)
  (Cardinals Dolphins Bills Cowboys 49ers Rams Seahawks)
  (Seahawks 49ers Rams Jets)
@@ -19,7 +18,7 @@
  (Steelers Texans Jaguars Redskins Chargers Bengals Patriots Cowboys Ravens Browns)
  (Browns Bengals Giants Jaguars)
  (Panthers Chargers Bears Falcons Chiefs Cardinals Raiders Lions Packers Buccaneers Broncos Saints)
- (Saints Buccaneers 49ers Raiders Chargers Packers Falcons Lions)
+ (Saints Buccaneers 49ers Raiders Chargers Chiefs Packers Falcons Lions)
  (Vikings Panthers Saints Texans Packers Jaguars Bears Lions Cardinals Giants)
  (Giants Rams Bengals Seahawks 49ers Steelers Cowboys Eagles Ravens Cardinals Redskins Panthers)
  (Colts Vikings Ravens Patriots Steelers Texans Chargers Browns Bengals Lions Jaguars Titans)

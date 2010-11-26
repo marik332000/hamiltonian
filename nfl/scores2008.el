@@ -100,7 +100,7 @@
  ((Eagles . 13)     . (Bengals . 13))
  ((Packers . 37)    . (Bears . 3))
  ((Colts . 33)      . (Texans . 27))
- ((Caints . 30)     . (Chiefs . 20))
+ ((Saints . 30)     . (Chiefs . 20))
  ((Dolphins . 17)   . (Raiders . 15))
  ((Giants . 30)     . (Ravens . 10))
  ((Panthers . 31)   . (Lions . 22))
