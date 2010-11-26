@@ -33,7 +33,7 @@
 
 (defun assign-win (graph winner loser)
   "Add loser to winner's list in graph."
-  (let ((winlist (assoc winner graph)))
+  (let ((winlist (assq winner graph)))
     (unless (member loser winlist)
       (setf (cdr winlist) (cons loser (cdr winlist))))))
 
